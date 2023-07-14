@@ -16,8 +16,8 @@ export default function Index() {
   const headerImage = collections[0]?.featuredAsset?.preview;
   return (
     <>
-      <div className="relative">
-        {/* Decorative image and overlay */}
+      {/* <div className="relative">
+        
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
           {headerImage && (
             <img
@@ -66,7 +66,7 @@ export default function Index() {
             </a>
           </p>
         </div>
-      </div>
+      </div> */}
 
       <section
         aria-labelledby="category-heading"
