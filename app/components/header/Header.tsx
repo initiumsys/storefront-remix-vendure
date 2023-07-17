@@ -93,15 +93,6 @@ export function Header({
             )}
           </button>
         </div>
-        <div>
-            <Link
-              to={isSignedIn ? '/account' : '/sign-in'}
-              className="flex space-x-1"
-            >
-              <UserIcon className="w-4 h-4 bg-white bg-opacity-20 rounded text-white p-1"></UserIcon>
-              <span>{isSignedIn ? 'My Account' : 'Sign In'}</span>
-            </Link>
-          </div>
       </div>
     </header>
   );
