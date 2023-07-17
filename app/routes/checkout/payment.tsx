@@ -48,7 +48,8 @@ export async function loader({ params, request }: DataFunctionArgs) {
       });
       stripePaymentIntent =
         stripePaymentIntentResult.createStripePaymentIntent ?? undefined;
-      stripePublishableKey = process.env.STRIPE_PUBLISHABLE_KEY || DEMO_STRIPE_PUBLISHABLE_KEY;
+      //stripePublishableKey = process.env.STRIPE_PUBLISHABLE_KEY || DEMO_STRIPE_PUBLISHABLE_KEY;
+      stripePublishableKey = DEMO_STRIPE_PUBLISHABLE_KEY
     } catch (e: any) {
       stripeError = e.message;
     }
