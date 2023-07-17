@@ -25,17 +25,17 @@ export default function AccountDashboard() {
   const tabs: TabProps[] = [
     {
       Icon: UserCircleIcon,
-      text: 'Account Details',
+      text: 'Detalles de la Cuenta',
       to: './',
     },
     {
       Icon: ShoppingBagIcon,
-      text: 'Purchase History',
+      text: 'Historial de Compras',
       to: './history',
     },
     {
       Icon: MapPinIcon,
-      text: 'Addresses',
+      text: 'Direcciones',
       to: './addresses',
     },
     {
@@ -48,17 +48,17 @@ export default function AccountDashboard() {
   return (
     <div className="max-w-6xl xl:mx-auto px-4">
       <h2 className="text-3xl sm:text-5xl font-light text-gray-900 my-8">
-        My Account
+        Mi Cuenta
       </h2>
       <p className="text-gray-700 text-lg -mt-4">
-        Welcome back, {firstName} {lastName}
+        Bienvenido, {firstName} {lastName}
       </p>
       <Form method="post" action="/api/logout">
         <button
           type="submit"
           className="underline text-primary-600 hover:text-primary-800"
         >
-          Sign out
+          Logout
         </button>
       </Form>
       <TabsContainer tabs={tabs}>

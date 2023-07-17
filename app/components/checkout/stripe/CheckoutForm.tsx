@@ -3,12 +3,13 @@ import {
   useElements,
   PaymentElement,
 } from '@stripe/react-stripe-js';
-import { FormEvent } from 'react';
+import { FormEvent, useState } from 'react';
 import { CreditCardIcon } from '@heroicons/react/24/solid';
 
 export const CheckoutForm = ({ orderCode }: { orderCode: string }) => {
   const stripe = useStripe();
   const elements = useElements();
+  const [errorPayment, setErrorPayment] = useState<string>('');
 
   const handleSubmit = async (event: FormEvent) => {
     // We don't want to let default form submission happen here,
@@ -30,6 +31,7 @@ export const CheckoutForm = ({ orderCode }: { orderCode: string }) => {
     });
 
     if (result.error) {
+      setErrorPayment(typeof result.error.message === "undefined" ? "" : result.error.message)
       // Show error to your customer (for example, payment details incomplete)
       console.log(result.error.message);
     } else {
@@ -49,6 +51,7 @@ export const CheckoutForm = ({ orderCode }: { orderCode: string }) => {
         <CreditCardIcon className="w-5 h-5"></CreditCardIcon>
         <span>Pay with Stripe</span>
       </button>
+      <p className="flex w-full px-6 bg-red-600 text-white space-x-2 rounded-md">{errorPayment}</p>
     </form>
   );
 };

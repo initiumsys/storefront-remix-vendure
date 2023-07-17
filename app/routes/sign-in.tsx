@@ -36,19 +36,19 @@ export default function SignInPage() {
             Sign in to your account
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
-            Or{' '}
+            O {' '}
             <Link
               to="/sign-up"
               className="font-medium text-primary-600 hover:text-primary-500"
             >
-              register a new account
+              registre una nueva cuenta
             </Link>
           </p>
         </div>
 
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
           <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-            <div className="bg-yellow-50 border border-yellow-400 text-yellow-800 rounded p-4 text-center text-sm">
+            {/* <div className="bg-yellow-50 border border-yellow-400 text-yellow-800 rounded p-4 text-center text-sm">
               <p>Demo credentials</p>
               <p>
                 Email address:{' '}
@@ -57,7 +57,7 @@ export default function SignInPage() {
               <p>
                 Password: <span className="font-bold">test</span>
               </p>
-            </div>
+            </div> */}
             <login.Form method="post"><fieldset disabled={login.state !== 'idle'} className="space-y-6">
               <input
                 type="hidden"
@@ -78,7 +78,7 @@ export default function SignInPage() {
                     type="email"
                     autoComplete="email"
                     required
-                    defaultValue="test@vendure.io"
+                    defaultValue=""
                     placeholder="Email address"
                     className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm disabled:text-gray-400 disabled:bg-gray-200 disabled:cursor-not-allowed"
                   />
@@ -100,7 +100,7 @@ export default function SignInPage() {
                     autoComplete="current-password"
                     required
                     placeholder="Password"
-                    defaultValue="test"
+                    defaultValue=""
                     className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm disabled:text-gray-400 disabled:bg-gray-200 disabled:cursor-not-allowed"
                   />
                 </div>
@@ -119,7 +119,7 @@ export default function SignInPage() {
                     htmlFor="rememberMe"
                     className="ml-2 block text-sm text-gray-900"
                   >
-                    Remember me
+                    Recuerdame
                   </label>
                 </div>
 
@@ -128,7 +128,7 @@ export default function SignInPage() {
                     href="#"
                     className="font-medium text-primary-600 hover:text-primary-500"
                   >
-                    Forgot your password?
+                    Ha olvidado su password?
                   </a>
                 </div>
               </div>
@@ -144,7 +144,7 @@ export default function SignInPage() {
                     </div>
                     <div className="ml-3">
                       <h3 className="text-sm font-medium text-red-800">
-                        We ran into a problem signing you in!
+                        Tenemos un problema para el login!
                       </h3>
                       <p className="text-sm text-red-700 mt-2">
                         {login.data.message}
@@ -161,7 +161,7 @@ export default function SignInPage() {
                 >
                   <span className='flex gap-4 items-center'>
                     {login.state !== 'idle' && <ArrowPathIcon className="animate-spin h-5 w-5 text-gray-500" />}
-                    Sign in
+                    Login
                   </span>
                 </Button>
               </div>

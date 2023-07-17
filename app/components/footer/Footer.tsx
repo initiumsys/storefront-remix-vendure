@@ -3,16 +3,16 @@ import { Link } from '@remix-run/react';
 
 const navigation = {
   support: [
-    { name: 'Help', href: '#' },
-    { name: 'Track order', href: '#' },
-    { name: 'Shipping', href: '#' },
-    { name: 'Returns', href: '#' },
+    { name: 'Ayuda', href: '#' },
+    { name: 'Seguimiento de ordenes', href: '#' },
+    { name: 'Envios', href: '#' },
+    { name: 'Devoluciones', href: '#' },
   ],
   company: [
-    { name: 'About', href: '#' },
+    { name: 'Sobre Nosotros', href: '#' },
     { name: 'Blog', href: '#' },
-    { name: 'Corporate responsibility', href: '#' },
-    { name: 'Press', href: '#' },
+    { name: 'Responsabilidad Corporativa', href: '#' },
+    { name: 'Prensa', href: '#' },
   ],
 };
 
@@ -35,7 +35,7 @@ export default function Footer({
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold text-gray-500 tracking-wider uppercase">
-                  Shop
+                  Tienda
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {collections.map((collection) => (
@@ -54,7 +54,7 @@ export default function Footer({
               </div>
               <div className="mt-12 md:mt-0">
                 <h3 className="text-sm font-semibold text-gray-500 tracking-wider uppercase">
-                  Support
+                  Soporte
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.support.map((item) => (
@@ -73,7 +73,7 @@ export default function Footer({
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold text-gray-500 tracking-wider uppercase">
-                  Company
+                  Empresa
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.company.map((item) => (
@@ -92,10 +92,10 @@ export default function Footer({
           </div>
           <div className="mt-8 xl:mt-0">
             <h3 className="text-sm font-semibold text-gray-500 tracking-wider uppercase">
-              Subscribe to our newsletter
+              Suscribase a nuestra newsletter
             </h3>
             <p className="mt-4 text-base text-gray-500">
-              Be the first to know about exclusive offers & deals.
+              Se el primero para conocer sobre nuestras ofertas y promociones.
             </p>
             <form className="mt-4 sm:flex sm:max-w-md">
               <label htmlFor="email-address" className="sr-only">
@@ -108,21 +108,21 @@ export default function Footer({
                 autoComplete="email"
                 required
                 className="appearance-none min-w-0 w-full bg-white border border-gray-300 rounded-md py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white focus:border-white focus:placeholder-gray-400"
-                placeholder="Enter your email"
+                placeholder="Escriba su email"
               />
               <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
                 <button
                   type="submit"
                   className="w-full bg-primary-500 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary-500"
                 >
-                  Subscribe
+                  Suscribir
                 </button>
               </div>
             </form>
           </div>
         </div>
         <div className="mt-8 border-t pt-8">
-          <a
+          {/* <a
             className="flex items-center space-x-4 font-medium text-gray-500 hover:text-gray-700"
             href="https://github.com/vendure-ecommerce/storefront-remix-starter"
           >
@@ -139,7 +139,7 @@ export default function Footer({
               />
             </svg>
             <span>github.com/vendure-ecommerce/storefront-remix-starter</span>
-          </a>
+          </a> */}
         </div>
       </div>
     </footer>

@@ -32,7 +32,7 @@ export default function Index() {
           aria-hidden="true"
           className="absolute inset-0 bg-gray-900 opacity-50"
         />
-        <div className="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0">
+        {/* <div className="relative max-w-3xl mx-auto py-32 px-6 flex flex-col items-center text-center sm:py-64 lg:px-0">
           <div className="relative bg-zinc-800 bg-opacity-0 rounded-lg p-0">
             <h1 className="text-6xl text-transparent bg-clip-text font-extrabold tracking-normal lg:text-6xl bg-gradient-to-r from-yellow-600 via-red-500 to-blue-600">
               Vendure Remix Starter
@@ -65,7 +65,7 @@ export default function Index() {
               Lightning Fast Headless Commerce with Vendure and Remix
             </a>
           </p>
-        </div>
+        </div> */}
       </div>
 
       <section
@@ -77,7 +77,7 @@ export default function Index() {
             id="category-heading"
             className="text-2xl font-light tracking-tight text-gray-900"
           >
-            Shop by Category
+            Categorias
           </h2>
         </div>
 
@@ -93,7 +93,7 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="mt-6 px-4 sm:hidden">
+        {/* <div className="mt-6 px-4 sm:hidden">
           <a
             href="~/routes/__cart/index#"
             className="block text-sm font-semibold text-primary-600 hover:text-primary-500"
@@ -101,7 +101,7 @@ export default function Index() {
             Browse all categories
             <span aria-hidden="true"> &rarr;</span>
           </a>
-        </div>
+        </div> */}
       </section>
     </>
   );

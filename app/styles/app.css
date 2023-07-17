@@ -1725,6 +1725,11 @@ button:disabled {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
+#app .bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
 #app .bg-opacity-0 {
   --tw-bg-opacity: 0;
 }
