@@ -16,6 +16,7 @@ import { StripePayments } from '~/components/checkout/stripe/StripePayments';
 import { DummyPayments } from '~/components/checkout/DummyPayments';
 import { BraintreeDropIn } from '~/components/checkout/braintree/BraintreePayments';
 import { getActiveOrder } from '~/providers/orders/order';
+import { DEMO_STRIPE_PUBLISHABLE_KEY } from '~/constants';
 
 export async function loader({ params, request }: DataFunctionArgs) {
   const session = await sessionStorage.getSession(
@@ -47,7 +48,7 @@ export async function loader({ params, request }: DataFunctionArgs) {
       });
       stripePaymentIntent =
         stripePaymentIntentResult.createStripePaymentIntent ?? undefined;
-      stripePublishableKey = process.env.STRIPE_PUBLISHABLE_KEY;
+      stripePublishableKey = process.env.STRIPE_PUBLISHABLE_KEY || DEMO_STRIPE_PUBLISHABLE_KEY;
     } catch (e: any) {
       stripeError = e.message;
     }
