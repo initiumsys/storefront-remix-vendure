@@ -17,6 +17,6 @@ export const sessionStorage = getCookieSessionStorageFactory()({
     httpOnly: true,
     path: '/',
     sameSite: 'lax',
-    secrets: ['awdifgedhdbaw'],
+    secrets: ['owjfhbhuhdzat'],
   },
 });

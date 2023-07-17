@@ -25,8 +25,8 @@ export function Header({
     >
       <div className="bg-zinc-100 text-gray-600 shadow-inner text-center text-sm py-2 px-2 xl:px-0">
         <div className="max-w-6xl mx-2 md:mx-auto flex items-center justify-between">
-          <div>
-            {/* <p className="hidden sm:block">
+          {/* <div>
+            <p className="hidden sm:block">
               Exclusive: Get your own{' '}
               <a
                 href="https://github.com/vendure-ecommerce/storefront-remix-starter"
@@ -35,7 +35,10 @@ export function Header({
               >
                 FREE storefront starter kit
               </a>
-            </p> */}
+            </p>
+          </div> */}
+          <div>
+            <p className="hidden sm:block">Tienda de Alberto</p>
           </div>
           <div>
             <Link
@@ -55,7 +58,7 @@ export function Header({
               src="/cube-logo-small.webp"
               width={40}
               height={31}
-              alt="Vendure logo"
+              alt="Tienda Alberto logo"
             />
           </Link>
         </h1>
@@ -90,6 +93,15 @@ export function Header({
             )}
           </button>
         </div>
+        <div>
+            <Link
+              to={isSignedIn ? '/account' : '/sign-in'}
+              className="flex space-x-1"
+            >
+              <UserIcon className="w-4 h-4 bg-white bg-opacity-20 rounded text-white p-1"></UserIcon>
+              <span>{isSignedIn ? 'My Account' : 'Sign In'}</span>
+            </Link>
+          </div>
       </div>
     </header>
   );
