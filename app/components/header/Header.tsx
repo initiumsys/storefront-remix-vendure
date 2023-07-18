@@ -55,7 +55,7 @@ export function Header({
         <h1 className="text-white w-10">
           <Link to="/">
             <img
-              src="/cube-logo-small.webp"
+              src="/logo.webp"
               width={40}
               height={31}
               alt="Tienda Alberto logo"
